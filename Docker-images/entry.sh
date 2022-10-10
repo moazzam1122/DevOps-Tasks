@@ -1,0 +1,8 @@
+#!/bin/sh
+
+set -e
+echo $SOURCE_BUCKET
+echo $SOURCE_BUKCET_KEY
+echo $TARGET_BUCKET
+echo $TARGET_BUKCET_KEY
+aws s3 cp s3://$SOURCE_BUCKET/$SOURCE_BUKCET_KEY s3://$TARGET_BUCKET/$TARGET_BUKCET_KEY --recursive
