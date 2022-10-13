@@ -93,8 +93,8 @@ def create_batch_job_definition(compute_enviroment_name,job_queue_name):
             type='container',
             containerProperties={
                 'image': 'public.ecr.aws/y2a9o9h4/s3_copy:latest',#os.environ["ECR_S3_COPY_IMAGE_URI"]
-                'jobRoleArn': 'arn:aws:iam::412393146416:role/ecsTaskExecutionRole', #os.environ["BATCH_JOB_ROLE_ARN"]
-                'executionRoleArn': 'arn:aws:iam::412393146416:role/ecsTaskExecutionRole', #os.environ["BATCH_JOB_ROLE_ARN"]
+                'jobRoleArn': 'arn:aws:iam::test:role/ecsTaskExecutionRole', #os.environ["BATCH_JOB_ROLE_ARN"]
+                'executionRoleArn': 'arn:aws:iam::test:role/ecsTaskExecutionRole', #os.environ["BATCH_JOB_ROLE_ARN"]
                 'environment': [
                         {"name": "SOURCE_BUCKET", "value": "moazzam-test-bucket-source"},
                         {"name": "TARGET_BUCKET", "value": "moazzmtesttarget"},
